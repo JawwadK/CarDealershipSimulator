@@ -8,6 +8,7 @@ public class Vehicle {
 	// Instanced variables
 	private String mfr, color, powerString;
 	private int power, numWheels;
+	private int VIN;
 	// Constants
 	public static final int ELECTRIC_MOTOR = 0;
 	public static final int GAS_ENGINE = 1;
@@ -23,6 +24,8 @@ public class Vehicle {
 		this.color = color;
 		this.power = power;
 		this.numWheels = numWheels;
+		Random rnd = new Random();
+		this.VIN = rnd.nextInt(399) + 100;
 	}
 	/**
 	 * Returns manufacturer of vehicle
